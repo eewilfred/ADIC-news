@@ -107,7 +107,7 @@
 				1DF20BEF26DF86D400007EBE /* Manager */,
 				1DF20BBF26DF866100007EBE /* AppDelegate.swift */,
 				1DF20BC126DF866100007EBE /* SceneDelegate.swift */,
-				1DF20BC326DF866100007EBE /* NewsListingViewController.swift */,
+				1DF20BF726DF974700007EBE /* Scenes */,
 				1DF20BC526DF866100007EBE /* Main.storyboard */,
 				1DF20BC826DF866200007EBE /* Assets.xcassets */,
 				1DF20BCA26DF866200007EBE /* LaunchScreen.storyboard */,
@@ -148,6 +148,22 @@
 				1DF20BF526DF92A900007EBE /* NYNews.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1DF20BF726DF974700007EBE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1DF20BF826DF977F00007EBE /* NewsListing */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		1DF20BF826DF977F00007EBE /* NewsListing */ = {
+			isa = PBXGroup;
+			children = (
+				1DF20BC326DF866100007EBE /* NewsListingViewController.swift */,
+			);
+			path = NewsListing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
