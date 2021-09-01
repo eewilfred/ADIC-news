@@ -21,11 +21,19 @@ class NewsListingTableViewCell: UITableViewCell {
         }
     }
 
+    private var imageDownLoadTask: URLSessionDataTask?
+
     override func awakeFromNib() {
         super.awakeFromNib()
-
         thumbnailImageView.layer.cornerRadius = thumbnailImageView.frame.height / 2
         backgroundColor = UIColor(named: "BGColor")
+    }
+
+    override func prepareForReuse() {
+
+        super.prepareForReuse()
+        imageDownLoadTask?.cancel()
+        imageView?.image = nil
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {}
@@ -42,6 +50,12 @@ class NewsListingTableViewCell: UITableViewCell {
 
         reporterLabel.textColor = UIColor(named: "SubtitleTextColor")
         publishedOnLabel.textColor = UIColor(named: "SubtitleTextColor")
+
+        if let imageURL = presentation.imageURLString,
+            let url = URL(string: imageURL) {
+            imageDownLoadTask = imageView?.setImage(from: url)
+            layoutIfNeeded()
+        }
     }
     
 }

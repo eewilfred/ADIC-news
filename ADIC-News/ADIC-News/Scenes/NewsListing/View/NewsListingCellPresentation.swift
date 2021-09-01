@@ -12,11 +12,16 @@ struct NewsListingCellPresentation: Hashable {
     var title: String?
     var reporter: String?
     var publishedOn: String?
+    var imageURLString: String?
 
     init(news: News) {
 
         title = news.title
-        reporter = "BY: \(news.byline ?? "")"
+        reporter = news.byline
         publishedOn = news.publishedDate
+
+        imageURLString = news.media?.first?.mediaMetadata?.first(
+            where: {$0.format == .thumbnail}
+        )?.url
     }
 }
