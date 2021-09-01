@@ -33,6 +33,9 @@
                             <constraint firstItem="MbT-Bm-fef" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mVp-7d-IZr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="MbT-Bm-fef" id="EqQ-hG-fV0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
