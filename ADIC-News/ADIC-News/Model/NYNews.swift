@@ -7,6 +7,13 @@
 
 import Foundation
 
+enum Format: String, Codable {
+
+    case medium = "mediumThreeByTwo210"
+    case large = "mediumThreeByTwo440"
+    case thumbnail = "Standard Thumbnail"
+}
+
 // MARK: - NYNews
 
 struct NYNews: BaseResult {
@@ -31,6 +38,7 @@ struct News: Decodable {
     let title: String?
     let desFacet: [String]?
     let geoFacet: [String]?
+    let media: [Media]?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -41,5 +49,23 @@ struct News: Decodable {
         case title
         case desFacet = "des_facet"
         case geoFacet = "geo_facet"
+        case media
     }
+}
+
+struct Media: Codable {
+
+    let mediaMetadata: [MediaMetadata]?
+
+    enum CodingKeys: String, CodingKey {
+
+        case mediaMetadata = "media-metadata"
+    }
+}
+
+// MARK: - MediaMetadatum
+
+struct MediaMetadata: Codable {
+    let url: String?
+    let format: Format?
 }
