@@ -9,15 +9,38 @@ import UIKit
 
 class NewsListingTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var reporterLabel: UILabel!
+    @IBOutlet private weak var publishedOnLabel: UILabel!
+    @IBOutlet private weak var thumbnailImageView: UIImageView!
+
+    var presentation: NewsListingCellPresentation? {
+
+        didSet {
+            updateUI()
+        }
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    override func awakeFromNib() {
+        super.awakeFromNib()
 
-        // Configure the view for the selected state
+        thumbnailImageView.layer.cornerRadius = 25.0
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {}
+
+    private func updateUI() {
+
+        guard  let presentation = presentation else {
+            return
+        }
+
+        titleLabel.text = presentation.title
+        reporterLabel.text = presentation.reporter
+        publishedOnLabel.text = presentation.publishedOn
+
+        reporterLabel.textColor = .systemGray2
+        publishedOnLabel.textColor = .systemGray2
     }
     
 }
