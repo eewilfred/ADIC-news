@@ -16,4 +16,12 @@ struct NewsListingPresentation {
 
 
     var cellPresentation: [NewsListingCellPresentation]?
+
+    mutating func update(news: [News]?) {
+
+        guard let news = news else {
+            return
+        }
+        cellPresentation = news.map({NewsListingCellPresentation(news: $0) })
+    }
 }
