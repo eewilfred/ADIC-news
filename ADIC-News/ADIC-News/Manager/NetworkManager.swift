@@ -35,6 +35,8 @@ open class NetworkManager {
     static let shared = NetworkManager()
     let session  = URLSession.shared
 
+    var imageCache = NSCache<NSURL,AnyObject>()
+
     private enum Constants {
 
         static let baseURL = "https://api.nytimes.com/svc/mostpopular/v2"
