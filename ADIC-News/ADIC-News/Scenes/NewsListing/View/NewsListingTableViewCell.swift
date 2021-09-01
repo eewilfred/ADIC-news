@@ -24,7 +24,8 @@ class NewsListingTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        thumbnailImageView.layer.cornerRadius = 25.0
+        thumbnailImageView.layer.cornerRadius = thumbnailImageView.frame.height / 2
+        backgroundColor = UIColor(named: "BGColor")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {}
@@ -39,8 +40,8 @@ class NewsListingTableViewCell: UITableViewCell {
         reporterLabel.text = presentation.reporter
         publishedOnLabel.text = presentation.publishedOn
 
-        reporterLabel.textColor = .systemGray2
-        publishedOnLabel.textColor = .systemGray2
+        reporterLabel.textColor = UIColor(named: "SubtitleTextColor")
+        publishedOnLabel.textColor = UIColor(named: "SubtitleTextColor")
     }
     
 }
