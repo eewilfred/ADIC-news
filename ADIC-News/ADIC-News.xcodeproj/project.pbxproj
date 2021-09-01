@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DF20BC026DF866100007EBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF20BBF26DF866100007EBE /* AppDelegate.swift */; };
+		1DF20BC226DF866100007EBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF20BC126DF866100007EBE /* SceneDelegate.swift */; };
+		1DF20BC426DF866100007EBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF20BC326DF866100007EBE /* ViewController.swift */; };
+		1DF20BC726DF866100007EBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF20BC526DF866100007EBE /* Main.storyboard */; };
+		1DF20BC926DF866200007EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DF20BC826DF866200007EBE /* Assets.xcassets */; };
+		1DF20BCC26DF866200007EBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF20BCA26DF866200007EBE /* LaunchScreen.storyboard */; };
+		1DF20BD726DF866200007EBE /* ADIC_NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF20BD626DF866200007EBE /* ADIC_NewsTests.swift */; };
+		1DF20BE226DF866200007EBE /* ADIC_NewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF20BE126DF866200007EBE /* ADIC_NewsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1DF20BD326DF866200007EBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DF20BB426DF866100007EBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DF20BBB26DF866100007EBE;
+			remoteInfo = "ADIC-News";
+		};
+		1DF20BDE26DF866200007EBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DF20BB426DF866100007EBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DF20BBB26DF866100007EBE;
+			remoteInfo = "ADIC-News";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1DF20BBC26DF866100007EBE /* ADIC-News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ADIC-News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF20BBF26DF866100007EBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1DF20BC126DF866100007EBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1DF20BC326DF866100007EBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1DF20BC626DF866100007EBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1DF20BC826DF866200007EBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DF20BCB26DF866200007EBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1DF20BCD26DF866200007EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DF20BD226DF866200007EBE /* ADIC-NewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ADIC-NewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF20BD626DF866200007EBE /* ADIC_NewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADIC_NewsTests.swift; sourceTree = "<group>"; };
+		1DF20BD826DF866200007EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DF20BDD26DF866200007EBE /* ADIC-NewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ADIC-NewsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF20BE126DF866200007EBE /* ADIC_NewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADIC_NewsUITests.swift; sourceTree = "<group>"; };
+		1DF20BE326DF866200007EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DF20BB926DF866100007EBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DF20BCF26DF866200007EBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DF20BDA26DF866200007EBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DF20BB326DF866100007EBE = {
+			isa = PBXGroup;
+			children = (
+				1DF20BBE26DF866100007EBE /* ADIC-News */,
+				1DF20BD526DF866200007EBE /* ADIC-NewsTests */,
+				1DF20BE026DF866200007EBE /* ADIC-NewsUITests */,
+				1DF20BBD26DF866100007EBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1DF20BBD26DF866100007EBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DF20BBC26DF866100007EBE /* ADIC-News.app */,
+				1DF20BD226DF866200007EBE /* ADIC-NewsTests.xctest */,
+				1DF20BDD26DF866200007EBE /* ADIC-NewsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DF20BBE26DF866100007EBE /* ADIC-News */ = {
+			isa = PBXGroup;
+			children = (
+				1DF20BBF26DF866100007EBE /* AppDelegate.swift */,
+				1DF20BC126DF866100007EBE /* SceneDelegate.swift */,
+				1DF20BC326DF866100007EBE /* ViewController.swift */,
+				1DF20BC526DF866100007EBE /* Main.storyboard */,
+				1DF20BC826DF866200007EBE /* Assets.xcassets */,
+				1DF20BCA26DF866200007EBE /* LaunchScreen.storyboard */,
+				1DF20BCD26DF866200007EBE /* Info.plist */,
+			);
+			path = "ADIC-News";
+			sourceTree = "<group>";
+		};
+		1DF20BD526DF866200007EBE /* ADIC-NewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				1DF20BD626DF866200007EBE /* ADIC_NewsTests.swift */,
+				1DF20BD826DF866200007EBE /* Info.plist */,
+			);
+			path = "ADIC-NewsTests";
+			sourceTree = "<group>";
+		};
+		1DF20BE026DF866200007EBE /* ADIC-NewsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1DF20BE126DF866200007EBE /* ADIC_NewsUITests.swift */,
+				1DF20BE326DF866200007EBE /* Info.plist */,
+			);
+			path = "ADIC-NewsUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DF20BBB26DF866100007EBE /* ADIC-News */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DF20BE626DF866200007EBE /* Build configuration list for PBXNativeTarget "ADIC-News" */;
+			buildPhases = (
+				1DF20BB826DF866100007EBE /* Sources */,
+				1DF20BB926DF866100007EBE /* Frameworks */,
+				1DF20BBA26DF866100007EBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ADIC-News";
+			productName = "ADIC-News";
+			productReference = 1DF20BBC26DF866100007EBE /* ADIC-News.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1DF20BD126DF866200007EBE /* ADIC-NewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DF20BE926DF866200007EBE /* Build configuration list for PBXNativeTarget "ADIC-NewsTests" */;
+			buildPhases = (
+				1DF20BCE26DF866200007EBE /* Sources */,
+				1DF20BCF26DF866200007EBE /* Frameworks */,
+				1DF20BD026DF866200007EBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DF20BD426DF866200007EBE /* PBXTargetDependency */,
+			);
+			name = "ADIC-NewsTests";
+			productName = "ADIC-NewsTests";
+			productReference = 1DF20BD226DF866200007EBE /* ADIC-NewsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1DF20BDC26DF866200007EBE /* ADIC-NewsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DF20BEC26DF866200007EBE /* Build configuration list for PBXNativeTarget "ADIC-NewsUITests" */;
+			buildPhases = (
+				1DF20BD926DF866200007EBE /* Sources */,
+				1DF20BDA26DF866200007EBE /* Frameworks */,
+				1DF20BDB26DF866200007EBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DF20BDF26DF866200007EBE /* PBXTargetDependency */,
+			);
+			name = "ADIC-NewsUITests";
+			productName = "ADIC-NewsUITests";
+			productReference = 1DF20BDD26DF866200007EBE /* ADIC-NewsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DF20BB426DF866100007EBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					1DF20BBB26DF866100007EBE = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					1DF20BD126DF866200007EBE = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 1DF20BBB26DF866100007EBE;
+					};
+					1DF20BDC26DF866200007EBE = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 1DF20BBB26DF866100007EBE;
+					};
+				};
+			};
+			buildConfigurationList = 1DF20BB726DF866100007EBE /* Build configuration list for PBXProject "ADIC-News" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1DF20BB326DF866100007EBE;
+			productRefGroup = 1DF20BBD26DF866100007EBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DF20BBB26DF866100007EBE /* ADIC-News */,
+				1DF20BD126DF866200007EBE /* ADIC-NewsTests */,
+				1DF20BDC26DF866200007EBE /* ADIC-NewsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DF20BBA26DF866100007EBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DF20BCC26DF866200007EBE /* LaunchScreen.storyboard in Resources */,
+				1DF20BC926DF866200007EBE /* Assets.xcassets in Resources */,
+				1DF20BC726DF866100007EBE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DF20BD026DF866200007EBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DF20BDB26DF866200007EBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DF20BB826DF866100007EBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DF20BC426DF866100007EBE /* ViewController.swift in Sources */,
+				1DF20BC026DF866100007EBE /* AppDelegate.swift in Sources */,
+				1DF20BC226DF866100007EBE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DF20BCE26DF866200007EBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DF20BD726DF866200007EBE /* ADIC_NewsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DF20BD926DF866200007EBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DF20BE226DF866200007EBE /* ADIC_NewsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1DF20BD426DF866200007EBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DF20BBB26DF866100007EBE /* ADIC-News */;
+			targetProxy = 1DF20BD326DF866200007EBE /* PBXContainerItemProxy */;
+		};
+		1DF20BDF26DF866200007EBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DF20BBB26DF866100007EBE /* ADIC-News */;
+			targetProxy = 1DF20BDE26DF866200007EBE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1DF20BC526DF866100007EBE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DF20BC626DF866100007EBE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1DF20BCA26DF866200007EBE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DF20BCB26DF866200007EBE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DF20BE426DF866200007EBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1DF20BE526DF866200007EBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DF20BE726DF866200007EBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5C56CTSGBQ;
+				INFOPLIST_FILE = "ADIC-News/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eandd.ADIC-News";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1DF20BE826DF866200007EBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5C56CTSGBQ;
+				INFOPLIST_FILE = "ADIC-News/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eandd.ADIC-News";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1DF20BEA26DF866200007EBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5C56CTSGBQ;
+				INFOPLIST_FILE = "ADIC-NewsTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eandd.ADIC-NewsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ADIC-News.app/ADIC-News";
+			};
+			name = Debug;
+		};
+		1DF20BEB26DF866200007EBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5C56CTSGBQ;
+				INFOPLIST_FILE = "ADIC-NewsTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eandd.ADIC-NewsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ADIC-News.app/ADIC-News";
+			};
+			name = Release;
+		};
+		1DF20BED26DF866200007EBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5C56CTSGBQ;
+				INFOPLIST_FILE = "ADIC-NewsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eandd.ADIC-NewsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ADIC-News";
+			};
+			name = Debug;
+		};
+		1DF20BEE26DF866200007EBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5C56CTSGBQ;
+				INFOPLIST_FILE = "ADIC-NewsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "eandd.ADIC-NewsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ADIC-News";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DF20BB726DF866100007EBE /* Build configuration list for PBXProject "ADIC-News" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DF20BE426DF866200007EBE /* Debug */,
+				1DF20BE526DF866200007EBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DF20BE626DF866200007EBE /* Build configuration list for PBXNativeTarget "ADIC-News" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DF20BE726DF866200007EBE /* Debug */,
+				1DF20BE826DF866200007EBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DF20BE926DF866200007EBE /* Build configuration list for PBXNativeTarget "ADIC-NewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DF20BEA26DF866200007EBE /* Debug */,
+				1DF20BEB26DF866200007EBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DF20BEC26DF866200007EBE /* Build configuration list for PBXNativeTarget "ADIC-NewsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DF20BED26DF866200007EBE /* Debug */,
+				1DF20BEE26DF866200007EBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1DF20BB426DF866100007EBE /* Project object */;
+}
