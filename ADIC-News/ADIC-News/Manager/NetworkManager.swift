@@ -42,7 +42,7 @@ open class NetworkManager {
         static let apiKeyParam = "?api-key="
     }
 
-    func URLForApi(path: String) -> URL? {
+    static func URLForApi(path: String) -> URL? {
 
         return URL(string: Constants.baseURL + path + Constants.apiKeyParam + Constants.apiKey)
     }

@@ -13,7 +13,7 @@ struct NYNews: BaseResult {
 
     static let apiKey = "/viewed/1.json"
     
-    let news: [Result]?
+    let news: [News]?
 
     enum CodingKeys: String, CodingKey {
         case news = "results"
@@ -22,7 +22,7 @@ struct NYNews: BaseResult {
 
 // MARK: - Result
 
-struct Result: Decodable {
+struct News: Decodable {
     let id: Int?
     let publishedDate: String?
     let adxKeywords: String?
