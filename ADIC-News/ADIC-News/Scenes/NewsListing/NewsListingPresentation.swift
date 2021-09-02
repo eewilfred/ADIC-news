@@ -7,10 +7,14 @@
 
 import Foundation
 
+// MARK: - NewsListingSection
+
 enum NewsListingSection: CaseIterable {
 
     case main
 }
+
+// MARK: - NewsListingPresentation
 
 struct NewsListingPresentation {
 

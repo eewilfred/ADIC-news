@@ -9,6 +9,8 @@ import Foundation
 
 // NOTE: model does not support search items to be filtered
 
+// MARK: - NewsListingState
+
 struct NewsListingState {
 
     var news: [News]?
@@ -16,11 +18,15 @@ struct NewsListingState {
     var applyedFilters: [FilterSection: [String]]
 }
 
+// MARK: - NewsListingViewModelDelegate
+
 protocol NewsListingViewModelDelegate: AnyObject {
 
     func didFetchNews(isSuccessFull: Bool)
     func didUpdateResults()
 }
+
+// MARK: - NewsListingViewModel
 
 class NewsListingViewModel {
 

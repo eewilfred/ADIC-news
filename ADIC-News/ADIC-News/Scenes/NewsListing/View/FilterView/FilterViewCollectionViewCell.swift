@@ -7,6 +7,8 @@
 
 import UIKit
 
+// MARK: - FilterViewCellPresentation
+
 class FilterViewCellPresentation: Hashable {
 
     var filterType: FilterSection
@@ -28,6 +30,8 @@ class FilterViewCellPresentation: Hashable {
         lhs.uuid == rhs.uuid
     }
 }
+
+// MARK: - FilterViewCollectionViewCell
 
 class FilterViewCollectionViewCell: UICollectionViewCell {
 

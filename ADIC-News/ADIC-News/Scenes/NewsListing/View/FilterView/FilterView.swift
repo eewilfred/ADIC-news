@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - FilterSection
 
 enum FilterSection: String, CaseIterable {
 
@@ -15,10 +16,14 @@ enum FilterSection: String, CaseIterable {
     case type = "type"
 }
 
+// MARK: - FilterViewDelegate
+
 protocol FilterViewDelegate: AnyObject {
 
     func didApplyFilter(type: FilterSection, value: String, didEnabled: Bool)
 }
+
+// MARK: - FilterView
 
 class FilterView: UIView {
 
@@ -117,6 +122,8 @@ class FilterView: UIView {
         self.presentation = presentation
     }
 }
+
+// MARK: - UICollectionViewDelegate
 
 extension FilterView: UICollectionViewDelegate {
 

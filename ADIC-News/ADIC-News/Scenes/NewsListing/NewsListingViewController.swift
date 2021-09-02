@@ -161,6 +161,8 @@ extension NewsListingViewController: NewsListingViewModelDelegate {
     }
 }
 
+// MARK: - UISearchBarDelegate
+
 extension NewsListingViewController: UISearchBarDelegate {
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -179,6 +181,8 @@ extension NewsListingViewController: UISearchBarDelegate {
         }
     }
 }
+
+// MARK: - FilterViewDelegate
 
 extension NewsListingViewController: FilterViewDelegate {
 
