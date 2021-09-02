@@ -182,7 +182,8 @@ extension NewsListingViewController: UISearchBarDelegate {
 
 extension NewsListingViewController: FilterViewDelegate {
 
-    func didApplyFilter(type: FilterSection, value: String) {
-        
+    func didApplyFilter(type: FilterSection, value: String, didEnabled: Bool) {
+
+        model.applyFilter(type: type, value: value, didEnabled: didEnabled)
     }
 }

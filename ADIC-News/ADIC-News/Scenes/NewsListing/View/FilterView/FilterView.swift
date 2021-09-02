@@ -17,7 +17,7 @@ enum FilterSection: String, CaseIterable {
 
 protocol FilterViewDelegate: AnyObject {
 
-    func didApplyFilter(type: FilterSection, value: String)
+    func didApplyFilter(type: FilterSection, value: String, didEnabled: Bool)
 }
 
 class FilterView: UIView {
@@ -54,8 +54,8 @@ class FilterView: UIView {
             collectionView: collectionView,
             cellProvider: { (collectionView, indexPath, cellPresentation) in
                 guard let cell = collectionView.dequeueReusableCell(
-                        withReuseIdentifier: FilterViewCollectionViewCell.identifier,
-                        for: indexPath
+                    withReuseIdentifier: FilterViewCollectionViewCell.identifier,
+                    for: indexPath
                 ) as? FilterViewCollectionViewCell else { return UICollectionViewCell() }
 
                 cell.presentation = cellPresentation
@@ -128,18 +128,18 @@ extension FilterView: UICollectionViewDelegate {
         guard let sectionType = FilterSection.allCases[safe: indexPath.section],
               let presentations = presentation?.filters[sectionType],
               presentations[safe: indexPath.row] != nil,
-              var snapshot = dataSource?.snapshot() else {
+              var snapshot = dataSource?.snapshot(),
+              let cellPresentation = dataSource?.itemIdentifier(for: indexPath) else {
             return
         }
-        var filterValue = ""
-        presentation?.filters[sectionType]?[indexPath.row].isSelected.toggle()
-        if let item = dataSource?.itemIdentifier(for: indexPath) {
-            item.isSelected.toggle()
-            snapshot.reloadItems([item])
-            filterValue = item.name
-        }
+
+        cellPresentation.isSelected.toggle()
+        snapshot.reloadItems([cellPresentation])
         self.dataSource?.apply(snapshot)
 
-        delegate?.didApplyFilter(type: sectionType, value: filterValue)
+        delegate?.didApplyFilter(
+            type: sectionType,
+            value: cellPresentation.name,
+            didEnabled: cellPresentation.isSelected)
     }
 }
