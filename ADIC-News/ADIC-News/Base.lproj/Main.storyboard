@@ -72,6 +72,10 @@
                                     <outlet property="collectionView" destination="zJI-zq-fVp" id="Yyn-sa-6KH"/>
                                 </connections>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="hWo-LL-I7v">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -80,12 +84,14 @@
                             <constraint firstItem="6Mc-IO-2F9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QeM-FY-8J1"/>
                             <constraint firstAttribute="bottom" secondItem="MbT-Bm-fef" secondAttribute="bottom" id="QxV-xH-Rqh"/>
                             <constraint firstItem="6Mc-IO-2F9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VXw-9I-c4R"/>
+                            <constraint firstItem="hWo-LL-I7v" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cbx-rq-szL"/>
                             <constraint firstItem="MbT-Bm-fef" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dad-fL-CcI"/>
                             <constraint firstItem="xQc-Zu-lUu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="etB-yY-cz7"/>
                             <constraint firstItem="6Mc-IO-2F9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gjq-dk-JOp"/>
                             <constraint firstItem="MbT-Bm-fef" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="k5H-Uu-cnH"/>
                             <constraint firstItem="MbT-Bm-fef" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mVp-7d-IZr"/>
                             <constraint firstItem="xQc-Zu-lUu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xEB-Ua-44d"/>
+                            <constraint firstItem="hWo-LL-I7v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ybl-YM-Wil"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="NY Times Most Popular" largeTitleDisplayMode="always" id="5Tg-O6-PE6">
@@ -103,6 +109,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="hWo-LL-I7v" id="s4Z-Iz-gyg"/>
                         <outlet property="filterView" destination="xQc-Zu-lUu" id="0IL-hh-SnT"/>
                         <outlet property="searchbar" destination="6Mc-IO-2F9" id="HE8-wx-g46"/>
                         <outlet property="tableView" destination="MbT-Bm-fef" id="EqQ-hG-fV0"/>

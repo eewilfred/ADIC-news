@@ -12,6 +12,7 @@ class NewsListingViewController: UIViewController {
     @IBOutlet weak private var tableView: UITableView!
     @IBOutlet weak private var searchbar: UISearchBar!
     @IBOutlet weak private var filterView: FilterView!
+    @IBOutlet weak private var activityIndicator: UIActivityIndicatorView!
 
     private let model = NewsListingViewModel()
     private var presentation = NewsListingPresentation()
@@ -20,6 +21,7 @@ class NewsListingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.startAnimating()
         configureTableView()
         model.delegate = self
         model.fetchNews()
@@ -157,6 +159,8 @@ extension NewsListingViewController: NewsListingViewModelDelegate {
             if let news = self.model.state.news {
                 self.filterView.UpdatePresetnation(news: news)
             }
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
         }
     }
 }
