@@ -2,7 +2,7 @@
 NY times most viewed news listing application
 
 
-##Architecture Of The app:
+## Architecture Of The app:
 
 **I am following the MVVM-P pattern where we have**
 
@@ -14,7 +14,7 @@ Reason For going with this approach: The application can be made easier to maint
 
 We have a Network Manager and a socket connection manager all using URL sessions. This is kept separate for reusability accounts
 
-##UI
+## UI
 ### NewsListingViewController:
 Then Root view controller of the app is responsible for showing contents.
 NewsListingViewController has NewsListingViewModel, which has all business and network requesting logic.
