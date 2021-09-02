@@ -102,6 +102,20 @@ class NewsListingViewController: UIViewController {
 
 extension NewsListingViewController: NewsListingViewModelDelegate {
 
+    func didUpdateResults() {
+
+        guard var snapshot = dataSource?.snapshot() else { return }
+        snapshot.deleteItems(presentation.cellPresentation ?? [])
+        if model.state.filteredItems != nil {
+            presentation.update(news: model.state.filteredItems)
+        } else {
+            presentation.update(news: model.state.news)
+        }
+        snapshot.appendItems(presentation.cellPresentation ?? [])
+        dataSource?.apply(snapshot)
+    }
+
+
     func didFetchNews(isSuccessFull: Bool) {
 
         presentation.update(news: model.state.news)
@@ -115,6 +129,8 @@ extension NewsListingViewController: UISearchBarDelegate {
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
 
-        print(searchbar.text)
+        model.search(for: searchbar.text)
+        searchbar.resignFirstResponder()
+        searchbar.isHidden = true
     }
 }

@@ -10,11 +10,14 @@ import Foundation
 struct NewsListingState {
 
     var news: [News]?
+
+    var filteredItems: [News]?
 }
 
 protocol NewsListingViewModelDelegate: AnyObject {
 
     func didFetchNews(isSuccessFull: Bool)
+    func didUpdateResults()
 }
 
 class NewsListingViewModel {
@@ -31,6 +34,21 @@ class NewsListingViewModel {
             state.news = response.result?.news
             delegate?.didFetchNews(isSuccessFull: response.error == nil)
         }
-        
+    }
+
+    func search(for title: String?) {
+
+        guard let text = title,
+           !text.isEmpty else {
+
+            state.filteredItems = nil
+            delegate?.didUpdateResults()
+            return
+        }
+
+        state.filteredItems = state.news?.filter(
+            { $0.title?.lowercased().contains(text.lowercased()) ?? false }
+        )
+        delegate?.didUpdateResults()
     }
 }
