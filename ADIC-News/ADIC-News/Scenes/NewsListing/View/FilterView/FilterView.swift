@@ -15,47 +15,9 @@ enum FilterSection: String, CaseIterable {
     case type = "type"
 }
 
-struct FilterViewPresentation {
+protocol FilterViewDelegate: AnyObject {
 
-    var filters = [ FilterSection: [FilterViewCellPresentation]]()
-
-    mutating func update(news: [News]) {
-
-        var types = Set<String>()
-        var publishedDates = Set<String>()
-        var sourceLocations = Set<String> ()
-
-        news.forEach({
-            if let type = $0.type {
-                types.insert(type)
-            }
-            if let publishedDate = $0.publishedDate {
-                publishedDates.insert(publishedDate)
-            }
-            if let sourceLocation = $0.geoFacet {
-                sourceLocation.forEach { location in
-                    sourceLocations.insert(location)
-                }
-            }
-        })
-
-        FilterSection.allCases.forEach { section in
-            switch section {
-            case .sourceLocation:
-                filters[section] = sourceLocations.map(
-                    { FilterViewCellPresentation(filterType: section, name: $0)}
-                )
-            case .publishedDate:
-                filters[section] = publishedDates.map(
-                    { FilterViewCellPresentation(filterType: section, name: $0)}
-                )
-            case .type:
-                filters[section] = types.map(
-                    { FilterViewCellPresentation(filterType: section, name: $0)}
-                )
-            }
-        }
-    }
+    func didApplyFilter(type: FilterSection, value: String)
 }
 
 class FilterView: UIView {
@@ -63,6 +25,7 @@ class FilterView: UIView {
     @IBOutlet weak private var collectionView: UICollectionView!
 
     var presentation: FilterViewPresentation?
+    weak var delegate: FilterViewDelegate?
 
     var dataSource: UICollectionViewDiffableDataSource<FilterSection, FilterViewCellPresentation>?
 
@@ -80,6 +43,7 @@ class FilterView: UIView {
         let listLayout = UICollectionViewCompositionalLayout.list(using: layoutConfig)
 
         collectionView.collectionViewLayout = listLayout
+        collectionView.delegate = self
 
         collectionView.register(
             FilterViewCollectionViewCell.nib,
@@ -111,13 +75,7 @@ class FilterView: UIView {
             let headerItem = self.dataSource?.snapshot().sectionIdentifiers[indexPath.section]
             var configuration = headerView.defaultContentConfiguration()
             configuration.text = headerItem?.rawValue
-
-//            // Customize header appearance to make it more eye-catching
-//            configuration.textProperties.font = .boldSystemFont(ofSize: 16)
-//            configuration.textProperties.color = .systemBlue
             configuration.directionalLayoutMargins = .init(top: 20.0, leading: 0.0, bottom: 10.0, trailing: 0.0)
-
-            // Apply the configuration to header view
             headerView.contentConfiguration = configuration
         }
 
@@ -125,11 +83,8 @@ class FilterView: UIView {
             (collectionView, elementKind, indexPath) -> UICollectionReusableView? in
 
             if elementKind == UICollectionView.elementKindSectionHeader {
-
-                // Dequeue header view
                 return self.collectionView.dequeueConfiguredReusableSupplementary(
                     using: headerRegistration, for: indexPath)
-
             }
             return nil
         }
@@ -159,5 +114,32 @@ class FilterView: UIView {
         snapshot.appendItems(presentation.filters[.publishedDate] ?? [], toSection: .publishedDate)
         snapshot.appendItems(presentation.filters[.type] ?? [], toSection: .type)
         dataSource?.apply(snapshot)
+        self.presentation = presentation
+    }
+}
+
+extension FilterView: UICollectionViewDelegate {
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath
+    ) {
+
+        guard let sectionType = FilterSection.allCases[safe: indexPath.section],
+              let presentations = presentation?.filters[sectionType],
+              presentations[safe: indexPath.row] != nil,
+              var snapshot = dataSource?.snapshot() else {
+            return
+        }
+        var filterValue = ""
+        presentation?.filters[sectionType]?[indexPath.row].isSelected.toggle()
+        if let item = dataSource?.itemIdentifier(for: indexPath) {
+            item.isSelected.toggle()
+            snapshot.reloadItems([item])
+            filterValue = item.name
+        }
+        self.dataSource?.apply(snapshot)
+
+        delegate?.didApplyFilter(type: sectionType, value: filterValue)
     }
 }

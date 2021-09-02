@@ -29,6 +29,7 @@
 		1DF20C1426E0C24B00007EBE /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF20C1326E0C24B00007EBE /* FilterView.swift */; };
 		1DF20C1826E0C2BD00007EBE /* FilterViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF20C1626E0C2BD00007EBE /* FilterViewCollectionViewCell.swift */; };
 		1DF20C1926E0C2BD00007EBE /* FilterViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DF20C1726E0C2BD00007EBE /* FilterViewCollectionViewCell.xib */; };
+		1DF20C1B26E0E93100007EBE /* FilterViewPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF20C1A26E0E93100007EBE /* FilterViewPresentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		1DF20C1326E0C24B00007EBE /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		1DF20C1626E0C2BD00007EBE /* FilterViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		1DF20C1726E0C2BD00007EBE /* FilterViewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewCollectionViewCell.xib; sourceTree = "<group>"; };
+		1DF20C1A26E0E93100007EBE /* FilterViewPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewPresentation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 		1DF20C1526E0C29D00007EBE /* FilterView */ = {
 			isa = PBXGroup;
 			children = (
+				1DF20C1A26E0E93100007EBE /* FilterViewPresentation.swift */,
 				1DF20C1326E0C24B00007EBE /* FilterView.swift */,
 				1DF20C1626E0C2BD00007EBE /* FilterViewCollectionViewCell.swift */,
 				1DF20C1726E0C2BD00007EBE /* FilterViewCollectionViewCell.xib */,
@@ -370,6 +373,7 @@
 				1DF20BF226DF86D400007EBE /* NetworkManager.swift in Sources */,
 				1DF20BFD26DF9AA100007EBE /* NewsListingTableViewCell.swift in Sources */,
 				1DF20C0D26DFA0ED00007EBE /* NewsListingViewModel.swift in Sources */,
+				1DF20C1B26E0E93100007EBE /* FilterViewPresentation.swift in Sources */,
 				1DF20C1826E0C2BD00007EBE /* FilterViewCollectionViewCell.swift in Sources */,
 				1DF20BC426DF866100007EBE /* NewsListingViewController.swift in Sources */,
 				1DF20BF626DF92A900007EBE /* NYNews.swift in Sources */,

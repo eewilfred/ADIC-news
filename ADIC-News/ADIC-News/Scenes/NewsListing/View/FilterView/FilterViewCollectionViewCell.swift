@@ -7,20 +7,25 @@
 
 import UIKit
 
-struct FilterViewCellPresentation: Hashable {
+class FilterViewCellPresentation: Hashable {
 
     var filterType: FilterSection
     var name: String
     var isSelected = false
+    var uuid = UUID()
 
+    init(filterType: FilterSection,  name: String) {
+
+        self.filterType = filterType
+        self.name = name
+    }
     func hash(into hasher: inout Hasher) {
-        hasher.combine(name + filterType.rawValue)
+        hasher.combine(uuid)
         }
 
     static func == (lhs: FilterViewCellPresentation,
                     rhs: FilterViewCellPresentation) -> Bool {
-        lhs.name == rhs.name &&
-            lhs.filterType == rhs.filterType
+        lhs.uuid == rhs.uuid
     }
 }
 
@@ -39,6 +44,7 @@ class FilterViewCollectionViewCell: UICollectionViewCell {
 
         guard let presentation = presentation else { return }
 
+        isSelected = presentation.isSelected
         filterNameLabel.text = presentation.name
         backgroundColor = presentation.isSelected ? .black : .white
         filterNameLabel.textColor = presentation.isSelected ? .white : .black

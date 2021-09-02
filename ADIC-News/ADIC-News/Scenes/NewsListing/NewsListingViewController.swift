@@ -30,6 +30,7 @@ class NewsListingViewController: UIViewController {
     private func configureFilterView() {
 
         filterView.isHidden = true
+        filterView.delegate = self
         filterView.configureFilterView()
         if let news = model.state.news {
             filterView.UpdatePresetnation(news: news)
@@ -176,5 +177,12 @@ extension NewsListingViewController: UISearchBarDelegate {
             {
             model.search(for: searchText)
         }
+    }
+}
+
+extension NewsListingViewController: FilterViewDelegate {
+
+    func didApplyFilter(type: FilterSection, value: String) {
+        
     }
 }
