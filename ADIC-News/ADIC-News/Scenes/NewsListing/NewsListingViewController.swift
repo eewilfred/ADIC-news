@@ -9,7 +9,8 @@ import UIKit
 
 class NewsListingViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak private var tableView: UITableView!
+    @IBOutlet weak private var searchbar: UISearchBar!
 
     private let model = NewsListingViewModel()
     private var presentation = NewsListingPresentation()
@@ -21,6 +22,13 @@ class NewsListingViewController: UIViewController {
         configureTableView()
         model.delegate = self
         model.fetchNews()
+        configureSearchBar()
+    }
+
+    private func configureSearchBar() {
+
+        searchbar.delegate = self
+        searchbar.isHidden = true
     }
 
     private func configureTableView() {
@@ -68,6 +76,28 @@ class NewsListingViewController: UIViewController {
         snapshot.appendItems(presentation.cellPresentation ?? [])
         dataSource?.apply(snapshot)
     }
+
+    // MARK: - action
+    @IBAction func showSearch() {
+
+        if searchbar.isHidden == false {
+            searchbar.isHidden = true
+            return
+        }
+
+        let orginalSearchFrame = searchbar.frame
+        let newFrame = CGRect(
+            x: 0,
+            y: -orginalSearchFrame.height,
+            width: orginalSearchFrame.width,
+            height: orginalSearchFrame.height
+        )
+        searchbar.frame = newFrame
+        UIViewPropertyAnimator(duration: 0.2, curve: .easeOut) {
+            self.searchbar.frame = orginalSearchFrame
+            self.searchbar.isHidden = false
+        }.startAnimation()
+    }
 }
 
 extension NewsListingViewController: NewsListingViewModelDelegate {
@@ -78,5 +108,13 @@ extension NewsListingViewController: NewsListingViewModelDelegate {
         DispatchQueue.main.async {
             self.updateTableViewDataSource()
         }
+    }
+}
+
+extension NewsListingViewController: UISearchBarDelegate {
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+
+        print(searchbar.text)
     }
 }

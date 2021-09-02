@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ikv-p3-Q38">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--News Listing View Controller-->
+        <!--NY Times Most Popular-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="NewsListingViewController" customModule="ADIC_News" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,27 +17,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MbT-Bm-fef">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="yyK-1A-cBh"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="6Mc-IO-2F9">
+                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Mc-IO-2F9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QeM-FY-8J1"/>
                             <constraint firstAttribute="bottom" secondItem="MbT-Bm-fef" secondAttribute="bottom" id="QxV-xH-Rqh"/>
+                            <constraint firstItem="6Mc-IO-2F9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VXw-9I-c4R"/>
                             <constraint firstItem="MbT-Bm-fef" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dad-fL-CcI"/>
+                            <constraint firstItem="6Mc-IO-2F9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gjq-dk-JOp"/>
                             <constraint firstItem="MbT-Bm-fef" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="k5H-Uu-cnH"/>
                             <constraint firstItem="MbT-Bm-fef" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mVp-7d-IZr"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="NY Times Most Popular" largeTitleDisplayMode="always" id="5Tg-O6-PE6">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="jxV-C4-pC6">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="showSearch" destination="BYZ-38-t0r" id="Day-25-wWx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="searchbar" destination="6Mc-IO-2F9" id="HE8-wx-g46"/>
                         <outlet property="tableView" destination="MbT-Bm-fef" id="EqQ-hG-fV0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="44.866071428571423"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a6G-pb-1rf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ikv-p3-Q38" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JSS-bf-yrG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.46920007470000002" green="0.87980675699999999" blue="0.76469534640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.984274447" green="0.98441725970000005" blue="0.9764701724" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="saa-W3-Eu3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZe-y2-p05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="44.866071428571423"/>
         </scene>

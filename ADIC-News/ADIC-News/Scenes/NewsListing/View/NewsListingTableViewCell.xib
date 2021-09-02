@@ -41,7 +41,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZSN-oS-FXd">
-                        <rect key="frame" x="20" y="29.5" width="75" height="75"/>
+                        <rect key="frame" x="20" y="32" width="75" height="69.5"/>
                         <color key="backgroundColor" red="0.60000443459999997" green="0.60396975279999998" blue="0.59999996420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="75" id="euz-Sg-ga6"/>
