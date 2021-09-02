@@ -11,6 +11,7 @@ class NewsListingViewController: UIViewController {
 
     @IBOutlet weak private var tableView: UITableView!
     @IBOutlet weak private var searchbar: UISearchBar!
+    @IBOutlet weak private var filterView: FilterView!
 
     private let model = NewsListingViewModel()
     private var presentation = NewsListingPresentation()
@@ -23,6 +24,16 @@ class NewsListingViewController: UIViewController {
         model.delegate = self
         model.fetchNews()
         configureSearchBar()
+        configureFilterView()
+    }
+
+    private func configureFilterView() {
+
+        filterView.isHidden = true
+        filterView.configureFilterView()
+        if let news = model.state.news {
+            filterView.UpdatePresetnation(news: news)
+        }
     }
 
     private func configureSearchBar() {
@@ -87,7 +98,7 @@ class NewsListingViewController: UIViewController {
 
         let orginalSearchFrame = searchbar.frame
         let newFrame = CGRect(
-            x: 0,
+            x: orginalSearchFrame.origin.x,
             y: -orginalSearchFrame.height,
             width: orginalSearchFrame.width,
             height: orginalSearchFrame.height
@@ -96,6 +107,27 @@ class NewsListingViewController: UIViewController {
         UIViewPropertyAnimator(duration: 0.2, curve: .easeOut) {
             self.searchbar.frame = orginalSearchFrame
             self.searchbar.isHidden = false
+        }.startAnimation()
+    }
+
+    @IBAction func showFilterView() {
+
+        if filterView.isHidden == false {
+            filterView.isHidden = true
+            return
+        }
+
+        let orginalFilterFrame = filterView.frame
+        let newFrame = CGRect(
+            x: -orginalFilterFrame.width,
+            y: orginalFilterFrame.origin.y,
+            width: orginalFilterFrame.width,
+            height: orginalFilterFrame.height
+        )
+        filterView.frame = newFrame
+        UIViewPropertyAnimator(duration: 0.2, curve: .easeOut) {
+            self.filterView.frame = orginalFilterFrame
+            self.filterView.isHidden = false
         }.startAnimation()
     }
 }
@@ -121,6 +153,9 @@ extension NewsListingViewController: NewsListingViewModelDelegate {
         presentation.update(news: model.state.news)
         DispatchQueue.main.async {
             self.updateTableViewDataSource()
+            if let news = self.model.state.news {
+                self.filterView.UpdatePresetnation(news: news)
+            }
         }
     }
 }
