@@ -30,6 +30,7 @@
 		1DF20C1826E0C2BD00007EBE /* FilterViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF20C1626E0C2BD00007EBE /* FilterViewCollectionViewCell.swift */; };
 		1DF20C1926E0C2BD00007EBE /* FilterViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DF20C1726E0C2BD00007EBE /* FilterViewCollectionViewCell.xib */; };
 		1DF20C1B26E0E93100007EBE /* FilterViewPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF20C1A26E0E93100007EBE /* FilterViewPresentation.swift */; };
+		1DF20C1D26E0F3B000007EBE /* NewsListingViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF20C1C26E0F3B000007EBE /* NewsListingViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		1DF20C1626E0C2BD00007EBE /* FilterViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		1DF20C1726E0C2BD00007EBE /* FilterViewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewCollectionViewCell.xib; sourceTree = "<group>"; };
 		1DF20C1A26E0E93100007EBE /* FilterViewPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewPresentation.swift; sourceTree = "<group>"; };
+		1DF20C1C26E0F3B000007EBE /* NewsListingViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListingViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			children = (
 				1DF20BD626DF866200007EBE /* ADIC_NewsTests.swift */,
 				1DF20BD826DF866200007EBE /* Info.plist */,
+				1DF20C1C26E0F3B000007EBE /* NewsListingViewModelTest.swift */,
 			);
 			path = "ADIC-NewsTests";
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF20C1D26E0F3B000007EBE /* NewsListingViewModelTest.swift in Sources */,
 				1DF20BD726DF866200007EBE /* ADIC_NewsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

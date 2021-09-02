@@ -7,6 +7,8 @@
 
 import Foundation
 
+// NOTE: model does not support search items to be filtered
+
 struct NewsListingState {
 
     var news: [News]?
@@ -82,9 +84,11 @@ class NewsListingViewModel {
 
         if isAnyFiltersApplyed() {
             state.filteredItems = applyFilter()
-            delegate?.didUpdateResults()
-        }
 
+        } else {
+            state.filteredItems = nil
+        }
+        delegate?.didUpdateResults()
     }
 
     private func applyFilter() -> [News] {
