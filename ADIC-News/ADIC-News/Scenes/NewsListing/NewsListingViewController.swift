@@ -133,4 +133,13 @@ extension NewsListingViewController: UISearchBarDelegate {
         searchbar.resignFirstResponder()
         searchbar.isHidden = true
     }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+
+        if searchText.count > 2 ||
+            searchText.count == 0
+            {
+            model.search(for: searchText)
+        }
+    }
 }
