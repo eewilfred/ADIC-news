@@ -13,6 +13,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: where am i
+      run: pwd
+    - name: whats here
+      run: ls -l  
     - name: Force Xcode 13
       run: sudo xcode-select -switch /Applications/Xcode_13.2.1.app
     - name: Run tests
