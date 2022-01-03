@@ -22,7 +22,7 @@ jobs:
       - name: Uses ruby
         uses: ruby/setup-ruby@v1.57.0
         with:
-          ruby-version: 2.4.0
+          ruby-version: 3.0.3
           bundler-cache: true
       - name: Build and test
         run: bundle exec fastlane scan --destination "${destination}" --scheme "ADIC-news"
