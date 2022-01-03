@@ -14,13 +14,21 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: where am i
+      working-directory: ./ADIC-News
       run: pwd
     - name: whats here
-      run: ls -l  
+      working-directory: ./ADIC-News
+      run: |
+        ls -l
+        ls
+        cd ~
     - name: Force Xcode 13
+      working-directory: ./ADIC-News
       run: sudo xcode-select -switch /Applications/Xcode_13.2.1.app
     - name: Run tests
+      working-directory: ./ADIC-News
       run: xcodebuild clean test -project "ADIC-News.xcodeproj" -scheme "ADIC-News" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
     - name: Build App
+      working-directory: ./ADIC-News
       run: xcodebuild -project "ADIC-News.xcodeproj" -scheme "ADIC-News" -destination "generic/platform=iOS" -configuration Release build CODE_SIGNING_ALLOWED=NO
 
