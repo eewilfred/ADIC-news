@@ -1,7 +1,6 @@
 #!/bin/bash
 
 set -eo pipefail
-cd /ADIC-news/
 echo pwd
 xcodebuild -workspace ADIC-news.xcworkspace \
             -scheme Calculator\ iOS \
