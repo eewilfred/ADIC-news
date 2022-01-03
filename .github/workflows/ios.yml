@@ -13,8 +13,10 @@ jobs:
     # This job runs on macOS
     runs-on: macOS-latest
     steps:
-      - name: iOS Build Action
-        uses: yukiarrr/ios-build-action@v1.5.0
+       - name: Testing iOS app
+         run: exec ./.github/workflows/BuildApp.sh
+#       - name: iOS Build Action
+#         uses: yukiarrr/ios-build-action@v1.5.0
 
       # - name: Checkout
       #   uses: actions/checkout@v1
