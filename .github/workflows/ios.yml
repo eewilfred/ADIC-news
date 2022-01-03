@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-test:
+  test:
     # Job name is Test
     name: Test
     # This job runs on macOS
@@ -23,15 +23,14 @@ test:
         run: bundle install
         env:
           BUNDLE_GITHUB__COM: x-access-token:${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
-#       - name: Dependencies
-#         run: |
-#           carthage bootstrap --no-use-binaries --platform iOS --cache-builds
-#           bundle exec pod install
-#         env:
-#           DEVELOPER_DIR: ${{ matrix.xcode }}
+      - name: Dependencies
+        run: |
+          carthage bootstrap --no-use-binaries --platform iOS --cache-builds
+          bundle exec pod install
+        env:
+          DEVELOPER_DIR: ${{ matrix.xcode }}
       - name: Build and test
-        run: bundle exec fastlane scan --destination "${destination}" --scheme "ADIC-News"
+        run: bundle exec fastlane scan --destination "${destination}" --scheme "YOUR_APP_SCHEME"
         env:
           destination: ${{ matrix.destination }}
           DEVELOPER_DIR: ${{ matrix.xcode }}
-          
