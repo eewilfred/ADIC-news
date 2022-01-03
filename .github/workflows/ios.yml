@@ -18,6 +18,8 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v1
+      - name: Build
+        run: xcodebuild clean test -project ADIC-News.xcodeproj -scheme ADIC-News -destination "platform=iOS Simulator,name=iPhone 11 Pro"
       - name: Testing iOS app
         run: exec ./.github/workflows/BuildApp.sh
       # - name: Uses ruby
